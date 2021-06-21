@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
+  <!-- Font awesome -->
+  <script src="https://kit.fontawesome.com/6a79530112.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/main.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Dashboard</title>
+
+</head>
+
+<body class="green lighten-3">
+  <header>
+    <!-- NavBar -->
+    <div class="navbar-fixed">
+      <nav class="green darken-4">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#"><img src="logo2.png" alt="School Logo" height="70" width="300"></a>
+            <a href="#" data-target="slide-out" class="button-collapse show-on-large right sidenav-trigger"><i
+                class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="AboutUs.html">About Us</a>
+              </li>
+              <li>
+                <a href="Strand.html">Academic Strand</a>
+              </li>
+              <li>
+                <a href="SchoolLife.html">School Life</a>
+              </li>
+              <li>
+                <a href="Admission.html">Admission</a>
+              </li>
+              <li>
+                <a href="LogIn.html">MyMTSHS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SideNav Bar -->
+  <ul id="slide-out" class="sidenav" style="background-color:green;">
+    <li>
+      <a href="Home.html" class="white-text">
+        <i class="material-icons">home</i> Home
+      </a>
+    </li>
+    <li>
+      <a href="AboutUs.html" class="white-text">About Us</a>
+    </li>
+    <li>
+      <a href="Strand.html" class="white-text">Academic Strand</a>
+    </li>
+    <li>
+      <a href="SchoolLife.html" class="white-text">School Life</a>
+    </li>
+    <li>
+      <a href="Admission.html" class="white-text">Admission</a>
+    </li>
+    <li>
+      <div class="divider white"></div>
+    </li>
+    <li>
+      <a class="subheader white-text">Follow us on our <strong><em>Social Media</em></strong></a>
+      <div class="center">
+        <a href="#" class="btn-flat green darken-4 yellow-text waves-effect waves-green">MyMTSHS
+          <i class="fab fa-facebook left"></i>
+        </a>
+        <br>
+        <a href="#" class="btn-flat green darken-4 yellow-text waves-effect waves-green">MTSHS
+          <i class="fab fa-youtube left"></i>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div class="divider white"></div>
+    </li>
+    <li>
+      <a href="https://forms.gle/3jkTTA6uTQNP78qS9" class="white-text">Apply Online Now</a>
+    </li>
+    <li>
+      <a href="#" class="white-text">Contact Us</a>
+    </li>
+    <li><a href="Home.html" class="waves-effect white-text">Logout</a></li>
+  </ul>
+
+  <!-- Section: Stats -->
+  <section class="section section-stats center">
+    <div class="row">
+      <div class="col s12 m6 l3">
+        <div class="card-panel blue lighten-1 white-text center">
+          <i class="material-icons medium">insert_emoticon</i>
+          <h5>Monthly Visitors</h5>
+          <h3 class="count">28300</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate white" style="width: 40%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel center">
+          <i class="material-icons medium">mode_edit</i>
+          <h5>Blog Posts</h5>
+          <h3 class="count">105</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate blue lighten-1" style="width: 20%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel blue lighten-1 white-text center">
+          <i class="material-icons medium">mode_comment</i>
+          <h5>Comments</h5>
+          <h3 class="count">1200</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate white" style="width: 40%"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l3">
+        <div class="card-panel center">
+          <i class="material-icons medium">supervisor_account</i>
+          <h5>Users</h5>
+          <h3 class="count">2300</h3>
+          <div class="progress grey lighten-1">
+            <div class="determinate blue lighten-1" style="width: 10%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Visitors -->
+  <section class="section section-visitors blue lighten-4">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card-panel">
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <!-- Latest Comments -->
+        <ul class="collection with-header latest-comments">
+          <li class="collection-header">
+            <h5>Latest Comments</h5>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person1.jpg" alt="" class="circle">
+            <span class="title">Kyle Greenholt</span>
+            <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum at nisi blanditiis
+              doloremque tempore. Necessitatibus eius, quae facere itaque iste nam! Totam maxime explicabo natus tenetur
+              dolorem architecto a veniam.</p>
+            <a href="" class="approve green-text">Approve</a> |
+            <a href="" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person2.jpg" alt="" class="circle">
+            <span class="title">Sonja Cronin</span>
+            <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum at nisi blanditiis
+              doloremque tempore. Necessitatibus eius, quae facere itaque iste nam! Totam maxime explicabo natus tenetur
+              dolorem architecto a veniam.</p>
+            <a href="" class="approve green-text">Approve</a> |
+            <a href="" class="deny red-text">Deny</a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="img/person3.jpg" alt="" class="circle">
+            <span class="title">Lester Bayer</span>
+            <p class="truncate">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum at nisi blanditiis
+              doloremque tempore. Necessitatibus eius, quae facere itaque iste nam! Totam maxime explicabo natus tenetur
+              dolorem architecto a veniam.</p>
+            <a href="" class="approve green-text">Approve</a> |
+            <a href="" class="deny red-text">Deny</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Recent Posts & Todos -->
+  <section class="section section-recent">
+    <div class="row">
+      <div class="col s12 m6 l8">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Recent Posts</span>
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Category</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Post One</td>
+                  <td>Web Development</td>
+                  <td>
+                    <a href="details.html" class="btn blue lighten-4">Details</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Post Three</td>
+                  <td>Web Design</td>
+                  <td>
+                    <a href="details.html" class="btn blue lighten-4">Details</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Post Three</td>
+                  <td>Flutter Development</td>
+                  <td>
+                    <a href="details.html" class="btn blue lighten-4">Details</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6 l4">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Quick Todos</span>
+            <form id="todo-form">
+              <div class="input-field">
+                <input type="text" id="todo" placeholder="Add Todo...">
+              </div>
+            </form>
+            <ul class="collection todos">
+              <li class="collection-item">
+                <div>Todo One
+                  <a href="" class="secondary-content delete">
+                    <i class="material-icons">close</i>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section blue darken-2 white-text center">
+    <p>Madmin Panel Copyright &copy; 2021</p>
+  </footer>
+  <!-- Fixed action button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li>
+        <a href="#post-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">mode_edit</i>
+        </a>
+      </li>
+      <li>
+        <a href="#category-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">folder</i>
+        </a>
+      </li>
+      <li>
+        <a href="#user-modal" class="modal-trigger btn-floating blue">
+          <i class="material-icons">supervisor_account</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Add Post Modal -->
+  <div id="post-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Post</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+        <div class="input-field">
+          <select>
+            <option value="" disabled selected>Select option</option>
+            <option value="1">Web Development</option>
+            <option value="2">Web Design</option>
+            <option value="3">Flutter Development</option>
+            <option value="4">Other</option>
+          </select>
+          <label>Category</label>
+        </div>
+        <div class="input-field">
+          <textarea name="body" class="materialize-textarea"></textarea>
+          <label for="body"></label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Category Modal -->
+  <div id="category-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add Category</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="title">
+          <label for="title">Title</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add user Modal -->
+  <div id="user-modal" class="modal">
+    <div class="modal-content">
+      <h4>Add User</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="name">
+          <label for="">Name</label>
+        </div>
+        <div class="input-field">
+          <input type="email" id="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password">
+          <label for="password">Password</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="password2">
+          <label for="password">Confirm Password</label>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <a href=#!"" class="modal-action modal-close btn blue white-text">Submit</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Preloader -->
+  <div class="loader preloader-wrapper big active">
+    <div class="spinner-layer spinner-blue-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div>
+      <div class="gap-patch">
+        <div class="circle"></div>
+      </div>
+      <div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Section Footer -->
+  <!-- Footer Logo -->
+  <footer class="page-footer yellow accent-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12 b">
+          <a href="#"><img src="logo.png" alt="School Logo" height="150" width="300"></a>
+          <div class="schoolfooterdetails">
+            <a href="" class="fa fa-map-marker fa-1x" style="color:green"> 25 8th Avenue, Quezon City, Metro Manila</a>
+            <br>
+            <a href="" class="fa fa-phone-alt fa-1x" style="color:green"> +63 229 3330 or +63 229 4488</a> <br>
+            <a href="" class="fa fa-at fa-1x" style="color:green"> marianatrench@mtshs.com </a> <br>
+            <a href="" class="fa fa-facebook-official fa-1x" style="color:green"> MyMTSHS </a> <br>
+            <a href="" class="fa fa-youtube fa-1x" style="color:green"> MTSHS </a>
+          </div>
+
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <br>
+            <li><a class="black-text text-lighten-3" href="AboutUs.html"> <strong>About Us</strong> </a></li> <br>
+            <li><a class="black-text text-lighten-3" href="Strand.html"> <strong>Academic Strand</strong> </a></li> <br>
+            <li><a class="black-text text-lighten-3" href="SchoolLife.html"> <strong>School Life </strong> </a></li>
+            <br>
+            <li><a class="black-text text-lighten-3" href="Admission.html"> <strong>Admission</strong> </a></li> <br>
+            <li><a class="black-text text-lighten-3" href="LogIn.html"> <strong>MyMTSHS</strong> </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        <p style="text-align:center" class="black-text">
+          © 2021 Mariana Trench Senior High School <br>
+          Created by Alex, Cynthia, Jerone, Ryanne and Xam | Group 3 Cane
+          Town Colleges of the Philippines
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Jquery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- CDeditor CDN -->
+  <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+  <!-- DO NOT DELETE: This is for sidebar to be work -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      M.AutoInit();
+      var options = {
+        fullWidth: true,
+        indicators: true
+      };
+      var elems = document.querySelector('.carousel.no-autoinit');
+      console.log(elems)
+      var instances = M.Carousel.init(elems, options);
+    })
+  </script>
+
+
+
+</body>
+
+</html>
